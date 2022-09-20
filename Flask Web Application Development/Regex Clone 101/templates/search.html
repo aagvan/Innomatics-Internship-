@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regex Clone</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('regular_expression') }}">Home</a>
+    </nav>
+
+    <h2>Here are your Entered Details:</h2>
+        <h4>Regex Entered: {{ regex }}
+        <br>
+        String Entered: {{ string }}</h4>
+
+    {% if match %}
+        <h3>Match found!</h3>
+        <h4>No of matches in the given string: {{ count }}
+            <br>
+            Matches are: {{ match }}</h4>
+    {% else %}
+        <h3>Sorry, No Match Found!</h3>
+    {% endif %}
+</body>
+</html>
